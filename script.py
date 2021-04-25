@@ -1,8 +1,3 @@
-# https://www.youtube.com/watch?v=BTvukP5Au5g&ab_channel=PCCSmada
+from pytube import YouTube
 
-import pytube
-video_link = 'https://www.youtube.com/watch?v=BTvukP5Au5g&ab_channel=PCCSmada'
-yt = pytube.YouTube(video_link)
-video = yt.get('mpeg', '720p')
-path = '/Users/ACER/Desktop'
-video.download(path)
+yt = YouTube("https://www.youtube.com/watch?v=6gTLL_wgRFk&ab_channel=011_NurMuhammadAinulYaqin").streams.first().download()
